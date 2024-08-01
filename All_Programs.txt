@@ -1,0 +1,96 @@
+Name : Ramesh Yadav  AF0405750
+
+Question 1:
+//1.Write a Java program that takes an array of numbers as input from the user, filters out the even numbers, 
+//displays them, and calculates their sum. The user should be able to input random numbers.
+package package_demo;
+import java.util.*;			//importing java.util package
+public class Program_1 {
+	public static void main(String[] args) {
+		//input
+	    Scanner sc = new Scanner(System.in);
+		System.out.print("Enter array size : ");
+		int n = sc.nextInt();
+		int []arr = new int[n];
+		System.out.print("Enter array : ");
+		for(int i=0;i < n; i++) {
+		    arr[i] = sc.nextInt();
+		}
+		System.out.println(Arrays.toString(arr));
+		sc.close();
+		//logic
+		int sum = 0;
+		System.out.print("Even nos. : ");
+		for(int x : arr) {
+		    if(x % 2 == 0) {
+		        System.out.print(x);
+		        sum = sum + x;
+		    }
+		}
+		System.out.println("\n Sum : " + sum);
+	}
+}
+
+Question 2: Find the Largest Element using user input
+package package_demo;
+import java.util.*;
+public class Program_2 {
+	public static void main(String[] args) {
+	    //input
+	    Scanner sc = new Scanner(System.in);
+		System.out.print("Enter array size : ");
+		int n = sc.nextInt();
+		int []arr = new int[n];
+		System.out.print("Enter array : ");
+		for(int i=0;i < n; i++) {
+		    arr[i] = sc.nextInt();
+		}
+		System.out.println(Arrays.toString(arr));
+		sc.close();
+		//logic
+		int max = Integer.MIN_VALUE;
+		for(int x : arr) {
+		    if(x > max) {
+		        max = x;
+		    }
+		}
+		//Output
+		System.out.println("Max element : " + max);
+	}
+}
+
+Question 3 : Debug and solve the error in the below code
+package package_demo;
+
+public class Program_3 {
+	public static void main(String[] args) {
+	    
+	}
+}
+class Animal {
+  private String name;
+  public Animal(String name) {
+      this.name = name;
+  }
+  public void sound() {
+      System.out.println("Animal makes a sound");
+  }
+}
+class Dog extends Animal {
+  public Dog(String name) {
+      super(name);
+  }
+  public void sound(int volume) {
+      System.out.println("Dog barks with volume: " + volume);
+  }
+}
+
+class Cat extends Animal {
+  public Cat(String name) {
+      super(name);
+  }
+  @Override
+  public void sound() {
+      System.out.println("Cat makes a sound");
+  }
+}
